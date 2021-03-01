@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
       - name: Run tests
-        run: pytest
+        run: pytest 
         
   deploy:
     needs: test
@@ -30,5 +30,8 @@ jobs:
         with:
           python-version: '3.8.6'
       - name: Replace file in deploy directory
-        run: cp /root/actions-runner/date-app/CD/CD/main.py /root/farm
+        run: |
+          cp /root/actions-runner/date-app/CD/CD/main.py /root/farm
+          cd /root/farm
+          cat main.py
     
