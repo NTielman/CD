@@ -8,7 +8,7 @@ current_day = date.today()
 
 @app.route('/')
 def index():
-    return f'Tooday is {current_day.isoformat()}'
+    return f'Today is {current_day.isoformat()}'
 
 
 @app.route('/today/')
