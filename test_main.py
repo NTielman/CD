@@ -17,7 +17,7 @@ def test_index(client):
     response = client.get('/')
 
     assert response.status_code == 200
-    assert f'Tooday is {today.isoformat()}'.encode(
+    assert f'Today is {today.isoformat()}'.encode(
         'utf-8') in response.data
 
 
